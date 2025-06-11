@@ -49,7 +49,7 @@ const booksSlice = createSlice({
       state.push({ ...action.payload, id: newId });
     },
 
-    editBook : (state, action) => state = state.map((book) => book.id = action.payload.id ? action.payload : book),
+    editBook : (state, action) => state = state.map((book) => book.id == action.payload.id ? action.payload : book),
 
     deleteBook : (state, action) => state = state.filter((book) => book.id != action.payload) 
 
